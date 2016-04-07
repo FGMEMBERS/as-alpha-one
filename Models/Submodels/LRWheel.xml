@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<!--back-->
+	<!--right -->
+	<!--up -->
+		
+
+    <path>LWheel.ac</path>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Alloy</object-name>
+  <property>gear/gear[2]/rollspeed-ms</property>
+  <factor>-2</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Tyre</object-name>
+  <property>gear/gear[2]/rollspeed-ms</property>
+  <factor>-2</factor>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+<!-- ========== Effects ========= -->
+
+	<effect>
+		<inherits-from>Aircraft/as-alpha-one/Models/Effects/AS-Alpha-One</inherits-from>
+		<object-name>Alloy</object-name>
+	</effect>
+
+
+
+</PropertyList>

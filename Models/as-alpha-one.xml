@@ -1,0 +1,181 @@
+<PropertyList>
+ 
+<path>asalphaone.ac</path>
+
+<model> 
+ <path>Aircraft/as-alpha-one/Models/meter.xml</path>
+ <offsets> 
+  <x-m>-0.465</x-m>
+  <y-m>-0.55782</y-m>
+  <z-m>1.06</z-m>
+ </offsets>
+</model>
+
+<animation>
+   <type>light</type>
+   <light-type>spot</light-type>
+   <name>LightSrcRight</name>
+   <object-name>headlight</object-name>
+   <nopreview/>
+   <position>
+     <x>-1.6647</x>
+     <y>-0.05271</y>
+     <z>0.57536</z>
+   </position>
+   <direction>
+     <x>-2.14222</x>
+     <y>-0.05271</y>
+     <z>-0.1</z>
+   </direction>
+     <diffuse>
+            <r>2.7</r>
+            <g>2.7</g>
+            <b>2.6</b>
+            <a>1.0</a>
+        </diffuse>
+        <specular>
+            <r>2.7</r>
+            <g>2.7</g>
+            <b>2.6</b>
+            <a>1.0</a>
+        </specular>
+    <attenuation>
+     <c>1.0</c>
+     <l>0.002</l>
+     <q>0.00005</q>
+   </attenuation>
+   <exponent>25</exponent>
+   <cutoff>39</cutoff>
+    <near-m>2</near-m>
+   <far-m>250</far-m>
+ </animation>
+
+<!-- Submodels-->
+<model> 
+      <path>Submodels/LFWheel.xml</path>
+      <offsets> 
+      <x-m>-1.13913</x-m>
+  <y-m>-0.7147</y-m>
+  <z-m>0.30347</z-m>
+      </offsets>
+    </model>
+ 	<model> 
+      <path>Submodels/RFWheel.xml</path>
+      <offsets> 
+      <x-m>-1.13913</x-m>
+  <y-m>0.7147</y-m>
+  <z-m>0.30347</z-m>
+      </offsets>
+    </model>
+	<model> 
+      <path>Submodels/LRWheel.xml</path>
+      <offsets> 
+      <x-m>0.835</x-m>
+  <y-m>-0.7147</y-m>
+  <z-m>0.30347</z-m>
+      </offsets>
+    </model>
+ 	<model> 
+      <path>Submodels/RRWheel.xml</path>
+      <offsets> 
+     <x-m>0.835</x-m>
+  <y-m>0.7147</y-m>
+  <z-m>0.30347</z-m>
+      </offsets>
+</model>
+
+<!-- LIGHTS -->
+
+<animation>
+ <type>material</type>
+ <object-name>braking_lights</object-name>
+ <emission>
+  <red>1.0</red>
+  <green>0.0</green>
+  <blue>0.0</blue>
+  <factor-prop>/controls/gear/brake-parking</factor-prop>
+ </emission>
+</animation>
+<animation>
+ <type>material</type>
+ <object-name>braking_sign</object-name>
+ <emission>
+  <red>1.0</red>
+  <green>0.0</green>
+  <blue>0.0</blue>
+  <factor-prop>/controls/gear/brake-parking</factor-prop>
+ </emission>
+</animation>
+<animation>
+  <name>SirenOn</name>
+  <object-name>SirenOn</object-name>
+</animation>
+
+<animation>
+  <name>SirenOff</name>
+  <object-name>SirenOff</object-name>
+</animation>
+<animation>
+  <name>headlightOn</name>
+  <object-name>headlightOn</object-name>
+</animation>
+
+<animation>
+  <name>headlightOff</name>
+  <object-name>headlightOff</object-name>
+</animation>
+<animation>
+ <type>timed</type>
+ <object-name>SirenOn</object-name>
+ <object-name>SirenOff</object-name>
+ <use-personality type="bool">true</use-personality>
+ <branch-duration-sec>
+  <random>
+ <min>0.3</min>
+    <max>0.35</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+  <min>0.3</min>
+    <max>0.35</max>
+  </random>
+ </branch-duration-sec>
+</animation>
+
+<animation>
+ <type>timed</type>
+ <object-name>headlightOn</object-name>
+ <object-name>headlightOff</object-name>
+ <use-personality type="bool">true</use-personality>
+ <branch-duration-sec>
+  <random>
+ <min>0.5</min>
+    <max>0.55</max>
+  </random>
+ </branch-duration-sec>
+ <branch-duration-sec>
+  <random>
+   <min>0.5</min>
+    <max>0.55</max>
+  </random>
+ </branch-duration-sec>
+</animation>
+<!-- ========== Effects ========= -->
+
+	<effect>
+		<inherits-from>Aircraft/as-alpha-one/Models/Effects/AS-Alpha-One</inherits-from>
+		<object-name>Body</object-name>
+		<object-name>Mirror</object-name>
+		<object-name>Plastic</object-name>
+		<object-name>Trim</object-name>
+		<object-name>Logo</object-name>
+		<object-name>Logo2</object-name>
+	</effect>
+<effect>
+ <inherits-from>Effects/model-transparent</inherits-from>
+ <object-name>Window</object-name>
+</effect>
+
+</PropertyList>
+ 
